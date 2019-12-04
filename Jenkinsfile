@@ -40,7 +40,7 @@ node {
         if(isUnix()) {
             sh "java -jar target/*.jar"    
         } else {
-            bat (/java -jar target\/training-app-1.0-SNAPSHOT-jar-with-dependencies.jar/)   
+            bat (/java -jar target\/training-app-1.0-jar-with-dependencies.jar/)   
         }
    }
    stage('Public artefacts') {
