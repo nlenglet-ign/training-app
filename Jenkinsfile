@@ -43,4 +43,12 @@ node {
             bat (/java -jar target\/training-app-1.0-SNAPSHOT-jar-with-dependencies.jar/)   
         }
    }
+   stage('Public artefacts') {
+      if(isUnix()) {
+          sh "'${mvnHome}/bin/mvn' -DdeployOnly deploy"
+      } else {
+          bat (/"${mvnHome}\bin\mvn" -DdeployOnly only -s "C:\integ_continue\apache-maven-3.6.3-bin\apache-maven-3.6.3\conf\settings.xml" /)
+      }
+
+   }
 }

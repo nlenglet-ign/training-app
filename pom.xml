@@ -4,7 +4,7 @@
   <groupId>com.mycompany.app</groupId>
   <artifactId>training-app</artifactId>
   <packaging>jar</packaging>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0</version>
   <name>training-app</name>
   <url>http://maven.apache.org</url>
   <properties>
@@ -59,6 +59,18 @@
 	  </plugin>
 	</plugins>
   </build>
+	 <distributionManagement>
+		<repository>
+			<id>nexus</id>
+			<name>Releases</name>
+			<url>http://localhost:8081/repository/maven-releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>nexus</id>
+			<name>Snapshot</name>
+			<url>http://localhost:8081/repository/maven-snapshots</url>
+		</snapshotRepository>
+	</distributionManagement> 
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
